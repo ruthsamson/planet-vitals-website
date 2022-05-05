@@ -1,6 +1,6 @@
 
 body {
-    background-color: #615788;
+    background-color: #615788 !important;
 }
 
 .vitals-title{
@@ -17,20 +17,21 @@ body {
     background-size: fill;
     background-repeat: no-repeat;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
-
 }
 
 
 .vitals-img{
     width: 600px !important;
-    height: 500px !important;
+    height: 600px !important;
     border-radius: 50%;
     padding: 2rem;
     overflow: hidden;
+    border: none;
 }
 
 .vitals-img:hover {
     transform: scale(1.05);
+    transition: 0.5s ease-in-out;
 }
 
 .vitals-list {
@@ -40,8 +41,11 @@ body {
 
 .text-wrapper h4{
     text-align: center;
-    color: #E8D5B5;
+    color: rgba(250, 223, 155);
     font-size: 2rem;
-    text-decoration: overline !important;
     margin: 30px;
+}
+
+.grid {
+    border-radius: 50% !important;
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Vitals.css'
 import { Link } from 'react-router-dom'
-import { Grid, ImageListItem } from '@mui/material'
+import { Grid, ImageListItem, ImageListItemBar, ListItem, Stack } from '@mui/material'
 import climateChange from '../../images/climate-change.jpeg'
 import weather from '../../images/weather-forecast.png'
 import severeWeatherAlerts from '../../images/severe-weather.webp'
@@ -17,16 +17,16 @@ import landslide from '../../images/landslide.jpeg'
 
 
 
-
 const Vitals = () => {
 
+  
   return (
     <div className='vitals'>
       <h1 className='vitals-title'>Vitals</h1>
       <div className='vitals-list'>
        <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
        {itemData.map((item) => (
-           <Grid tem className='grid' xs={6}>
+           <Grid item className='grid' xs={6}>
            <Link to={`/${item.path}`}>
              <ImageListItem className='content-wrapper' key={item.img}>
               <div className='text-wrapper'>
@@ -36,15 +36,6 @@ const Vitals = () => {
                className='vitals-img'
                src= {item.img}
                alt={item.title}/>
-               {/* <ImageListItemBar sx={{
-                 background:
-                   'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
-                   'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-
-               }}
-               position="top"
-               title={item.title}
-             /> */}
              </ImageListItem>
            </Link>
            </Grid>
@@ -54,6 +45,8 @@ const Vitals = () => {
     </div>
   )
 }
+
+
 
 const itemData = [
 

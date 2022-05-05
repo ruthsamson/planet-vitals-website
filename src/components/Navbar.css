@@ -1,0 +1,14 @@
+.navbar {
+    background-color: black !important;
+    color: white !important;
+}
+
+.navbar-logo {
+    width: 80px;
+    height: 80px;
+    align-items: center;
+}
+
+.navbar-items {
+    float: right !important;
+}
