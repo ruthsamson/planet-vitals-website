@@ -1,4 +1,5 @@
-.navbar {
+
+ .navbar {
     background-color: black !important;
     color: white !important;
 }
@@ -6,9 +7,18 @@
 .navbar-logo {
     width: 80px;
     height: 80px;
-    align-items: center;
 }
 
-.navbar-items {
-    float: right !important;
+.navbar-container{
+    margin-left: auto !important;
+}
+
+.navbar-item {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.hamburger {
+    color: #fff !important;
+    margin-left: auto !important;
 }

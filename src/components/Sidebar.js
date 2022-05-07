@@ -1,51 +1,59 @@
-import { Close, HealthAndSafety } from '@mui/icons-material';
-import {  IconButton } from '@mui/material';
-import React, { useContext } from 'react'
+import { Menu } from '@mui/icons-material';
+import { Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import './Navbar.css'
 
 
 const Sidebar = () => {
 
-  const { isSideBarOpen, closeSideBar } = useContext();
+    const pages = [
+        {
+            title: 'Home',
+            path: ''
+        },
   
+        {
+          title: 'Vitals',
+          path: 'vitals'
+        },
+  
+        {
+          title: 'Sustainability',
+          path: 'sustainability'
+        }
+      ];
+
+    const [openDrawer, setOpenDrawer] = useState(false);
+    
   return (
-    <aside>
-      <div className='sidebar-header'>
-        {/* <img src={logo} className='logo' alt='Planet earth logo' /> */}
-        <IconButton>
-          <Close/>
+    <>
+        <Drawer 
+        open={openDrawer}
+        onClose={() => setOpenDrawer(false)}
+        >
+            <List>
+                {pages.map((page, index) => (
+                    <ListItemButton key={index} onClick={() => setOpenDrawer(false)}>
+                        <ListItemIcon>
+                            <Link to={`/${page.path}`} style={{textDecoration: 'none'}}>
+                                <ListItemText>
+                                    {page.title}
+                                </ListItemText>
+                            </Link>
+                        </ListItemIcon>
+                    </ListItemButton>
+                
+                ))}
+                
+            </List>
+        </Drawer>
+        <IconButton className='hamburger' onClick={() => setOpenDrawer(!openDrawer)}>
+            <Menu />
         </IconButton>
-      </div>
-      <ul>
-        {links.map((link) => {
-          const {id, path, text, icon} = link;
-          return (
-            <li key={id}>
-              <Link to={`/${path}`}>
-                {icon}
-                {text}
-              </Link>
-            </li>
-          )
-        })}
-      </ul>
-    </aside>
+
+    </>
   )
 }
-
-const links = [
-  {
-    id: 1,
-    path: 'vitals',
-    icon: <HealthAndSafety />,
-    text: 'Vitals',
-  },
-  {
-    id: 2,
-    path: 'help',
-    icon: <HealthAndSafety />,
-    text: 'How to Help',
-  },
-]
 
 export default Sidebar

@@ -112,8 +112,9 @@ Variables
 
 
   body {
-    background: url(../../images/climateChange-homepage.jpeg);
+    background: url("../page-images/climateChange-homepage.jpeg");
     background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
   }
 
   .section {

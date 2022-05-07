@@ -7,7 +7,6 @@
     object-fit: cover;
     z-index: -1;
     top: 0;
-
 }
 
 .hero-container {
@@ -27,22 +26,21 @@
     text-transform: uppercase;
     font-weight: 800 !important;
     font-size: 100px !important;
-    margin-top: -100px !important;
 }
 
 .link {
     text-decoration: none;    
 }
 
-Button {
+
+.btn-vitals {
+    background-color: #85009B!important;
     font-weight: 800 !important;
     margin: 40px 10px 0px 10px !important;
 }
 
-.btn-vitals {
-    background-color: #85009B!important;
-}
-
 .btn-help {
     background-color: #0073D2 !important;
+    font-weight: 800 !important;
+    margin: 40px 10px 0px 10px !important;
 }

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import './ClimateChange.css'
 import NASA from '../../images/climateChange-NASA.png';
 import EPA from '../../images/climateChange-EPA.png';
 import NOAA from '../../images/climateChange-NOAA.png';
 import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
+import Helmet from "react-helmet";
 
 
 
@@ -34,7 +34,8 @@ const ClimateChange = () => {
     return (
         <section className="section">
             <Helmet>
-
+                <title>Climate Change</title>
+                <link rel="stylesheet" href="./css/ClimateChange.css"/>
             </Helmet>
             <div className="title">
                 <h1>Climate · Change</h1>

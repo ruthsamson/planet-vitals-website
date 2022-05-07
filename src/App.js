@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/pages/Home';
+import Home from './components/Home';
 import Vitals from './components/pages/Vitals';
 import ClimateChange from './components/pages/ClimateChange';
 import WorldData from './components/pages/WorldData';
@@ -15,7 +15,7 @@ import Floods from './components/pages/Floods';
 import Droughts from './components/pages/Droughts';
 import Landslides from './components/pages/Landslides';
 import Navbar from './components/Navbar';
-import Sustainability from './components/Sustainability';
+import Sustainability from './components/pages/Sustainability';
 
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/'  exact element={<Home />}/>
+          <Route path='/' exact element={<Home />}/>
           <Route path='/vitals' element={<Vitals />}/>
           <Route path='/sustainability' element={<Sustainability />}/>
           <Route path='/climatechange' element={<ClimateChange />}/>

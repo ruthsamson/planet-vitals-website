@@ -12,7 +12,7 @@ body {
     font-weight: 800;
     color: #E8D5B5 !important;
     font-size: 6rem;
-    background-image: url('../../images/vitals.jpeg');
+    background-image: url('../page-images/vitals.jpeg');
     background-position: center;
     background-size: fill;
     background-repeat: no-repeat;
