@@ -4,29 +4,32 @@ body {
 }
 
 .vitals-title{
-    display: flex;
+    display: flex !important;
     height: 60vh;
     text-transform: uppercase;
-    justify-content: center;
-    align-items: center;
+    justify-content: center !important;
+    align-items: center !important;
     font-weight: 800;
     color: #E8D5B5 !important;
     font-size: 6rem;
     background-image: url('../page-images/vitals.jpeg');
-    background-position: center;
-    background-size: fill;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-grow: 2 !important;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
 }
 
 
 .vitals-img{
-    width: 600px !important;
-    height: 600px !important;
+    width: 400px !important;
+    height: 400px !important;
     border-radius: 50%;
     padding: 2rem;
-    overflow: hidden;
-    border: none;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .vitals-img:hover {
@@ -47,5 +50,42 @@ body {
 }
 
 .grid {
-    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
+
+@media only screen and (max-width: 1196px) {
+    .vitals-img{
+        width: 300px !important;
+        height: 300px !important;
+    }
+    
+    .text-wrapper h4 {
+        font-size: 1.5rem;
+    }
+  }
+
+@media only screen and (max-width: 900px) {
+    .vitals-img{
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .vitals-title {
+        font-size: 4rem;
+    }
+    
+  }
+
+  @media only screen and (max-width: 369px) {
+    .vitals-img{
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .vitals-title {
+        font-size: 2rem;
+    }
+    
+  }

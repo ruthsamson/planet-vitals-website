@@ -16,9 +16,18 @@
 .navbar-item {
     color: #fff !important;
     text-decoration: none !important;
+    font-size: 18px !important;
 }
 
 .hamburger {
     color: #fff !important;
     margin-left: auto !important;
 }
+
+@media only screen and (max-width: 900px) {
+    .navbar-logo {
+        width: 60px;
+        height: 60px;
+    }
+  }
+  

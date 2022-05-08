@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Grid, ImageListItem } from '@mui/material'
+import { Grid, ImageListItem, Box, Paper, ListItem } from '@mui/material'
 import climateChange from '../../images/climate-change.jpeg'
 import weather from '../../images/weather-forecast.png'
 import severeWeatherAlerts from '../../images/severe-weather.webp'
@@ -27,7 +27,26 @@ const Vitals = () => {
         <link rel="stylesheet" href="./css/Vitals.css"/>
       </Helmet>
       <h1 className='vitals-title'>Vitals</h1>
-      <div className='vitals-list'>
+      <Box sx={{flexGrow: 1}}>
+        <Grid className='grid' container spacing={{xs: 2, md: 3}} columns={{xs: 4, sm: 8, md: 12}}>
+          {itemData.map((item, index) => (
+            <Grid className='grid' item xs={4} sm={8} md={4} key={index}>
+              <Link to={`/${item.path}`}>
+                <ImageListItem className='content-wrapper' key={item.img}>
+                  <div className='text-wrapper'>
+                     <h4>{item.title}</h4>
+                   </div>
+                   <img
+                   className='vitals-img'
+                   src= {item.img}
+                   alt={item.title}/>
+                  </ImageListItem>
+                </Link>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+      {/* <div className='vitals-list'>
        <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
        {itemData.map((item) => (
            <Grid item className='grid' xs={6}>
@@ -45,7 +64,7 @@ const Vitals = () => {
            </Grid>
        ))};
        </Grid>
-      </div>
+      </div> */}
     </div>
   )
 }
@@ -68,7 +87,7 @@ const itemData = [
 
   {
     img: severeWeatherAlerts,
-    title: 'Severe Weather Alerts',
+    title: 'Severe Weather',
     path: 'severeweatheralerts',
   },
 
