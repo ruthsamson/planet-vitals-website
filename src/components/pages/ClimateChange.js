@@ -38,8 +38,12 @@ const ClimateChange = () => {
                 <link rel="stylesheet" href="./css/ClimateChange.css"/>
             </Helmet>
             <div className="title">
-                <h1>Climate · Change</h1>
-                <div className="underline"></div>
+                <h1>
+                    <span>Climate</span>
+                    <span className="dot"> · </span>
+                    <span>Change</span>
+                    <div className="underline"></div>
+                </h1>
             </div>
             <div className="website-nav">
                 <div className="btn-container">

@@ -37,9 +37,11 @@ const Navbar = () => {
     <div className='root'>
       <AppBar className='navbar'>
           <Toolbar>
+          <Link to='/'>
             <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
               <img src={logo} alt='logo' className='navbar-logo'/>
             </IconButton>
+          </Link>
             {screenSizeMatch ? (
               <>
                 <Sidebar />

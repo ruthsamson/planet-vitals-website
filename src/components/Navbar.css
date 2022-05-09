@@ -1,6 +1,6 @@
 
  .navbar {
-    background-color: black !important;
+    background-color: rgba(0, 0, 0, 0.7)!important;
     color: white !important;
 }
 
@@ -11,6 +11,7 @@
 
 .navbar-container{
     margin-left: auto !important;
+    border: none !important;
 }
 
 .navbar-item {
