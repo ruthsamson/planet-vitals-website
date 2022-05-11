@@ -103,7 +103,7 @@ const climateChangeInfo = [
     },
     {
         title: 'NOAA',
-        header: 'National Oceanic and Atmospheric Administration (NOAA) ',
+        header: 'National Oceanic and Atmospheric Administration (NOAA)',
         url: 'https://www.climate.gov/',
         img: NOAA,
 

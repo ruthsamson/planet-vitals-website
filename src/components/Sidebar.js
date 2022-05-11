@@ -18,10 +18,10 @@ const Sidebar = () => {
           path: 'vitals'
         },
   
-        {
-          title: 'Sustainability',
-          path: 'sustainability'
-        }
+        // {
+        //   title: 'Sustainability',
+        //   path: 'sustainability'
+        // }
       ];
 
     const [openDrawer, setOpenDrawer] = useState(false);

@@ -21,10 +21,10 @@ const Navbar = () => {
         path: 'vitals'
       },
 
-      {
-        title: 'Sustainability',
-        path: 'sustainability'
-      }
+      // {
+      //   title: 'Sustainability',
+      //   path: 'sustainability'
+      // }
     ];
 
     const [value, setValue] = useState();

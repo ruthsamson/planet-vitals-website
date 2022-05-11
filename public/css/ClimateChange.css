@@ -1,192 +1,202 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  a {
-    text-decoration: none;
-  }
-
-
-  h1 {
-    font-size: 3rem;
-    letter-spacing: 0.1rem;
-    line-height: 1.25;
-
-  }
-
-  h3 {
-    font-size: 1.25rem;
-    letter-spacing: 0.1rem;
-    line-height: 1.25;
-  }
+ a {
+   text-decoration: none;
+ }
 
 
+ h1 {
+   font-size: 3rem;
+   letter-spacing: 0.1rem;
+   line-height: 1.25;
 
-  body {
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url("../page-images/climateChange-homepage.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
+ }
 
-  }
+ h3 {
+   font-size: 1.25rem;
+   letter-spacing: 0.1rem;
+   line-height: 1.25;
+ }
 
-  .section {
-    margin: 5rem auto;
-    max-width: 1170px;
-  }
+body {
+   background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url("../page-images/climateChange-homepage.jpeg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100vh;
 
-  .website-image {
-    height: 400px;
-    width: 800px;
-  }
+ }
 
-  /* .loading {
-    text-align: center;
-  } */
-  
-  .underline {
-    width: 25rem;
-    height: 0.25rem;
-    background: #2caeba;
-    margin: 0.8rem auto 4rem auto
-  }
-
-  .title {
-    text-align: center;
-  }
-  
-  .title h1 {
-    margin-top: 8rem ;
-    color: #fff;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
-
-  .website-nav {
-    /* width: 80vw; */
-    margin: 0 auto;
-    max-width: 1170px;
-  }
-
-  .website-header {
-    display: flex;
-    justify-content: center;
-  }
-
-  .btn-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 4rem;
-    flex-wrap: wrap;
-  }
-  .website-btn {
-    background: transparent;
-    border-color: transparent;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    letter-spacing: 0.1rem;
-    margin: 0 0.5rem;
-    transition: all 0.3s linear;
-    cursor: pointer;
-    padding: 1rem 0;
-    line-height: 2;
-    font-weight: 300;
-    color: #fff;
-
-  }
-  .website-btn:hover {
-    color: #2caeba;
-    box-shadow: 0 2px #2caeba;
-  }
-  .active-btn {
-    color:#2caeba;
-    box-shadow: 0 2px #2caeba;
-  }
-
-  .website-info {
-  }
-  
-  .website-info h3 {
-    font-weight: 200;
-    color: #fff;
-    margin-bottom: 2rem;
-  }
-
-
-  .btn {
-    text-transform: uppercase;
-    background: #2caeba;
-    color: hsl(185, 94%, 87%);
-    padding: 0.7rem 1rem;
-    letter-spacing: 0.1rem;;
-    font-weight: 700;
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-    font-size: 0.875rem;
-    border: 2px solid transparent;
-    cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    border-radius: 0.45rem;
-    display: block;
-    width: 9rem;
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .btn:hover {
-    color: hsl(184, 91%, 17%);
-    background: hsl(184, 80%, 74%);
-  }
-
-
-  @media screen and (max-width: 468px) {
-    .dot {
-      display: none;
-    }
-    span {
-      display: block;
-    }
-
-  }
-  
-  @media screen and (max-width: 992px) {
+ .section {
+   width: 90vw;
+   margin: 5rem auto;
+   max-width: 1170px;
+ }
 
  
+ /* .loading {
+   text-align: center;
+ } */
+ 
+ .underline {
+   width: 10rem;
+   height: 0.25rem;
+   background: #2caeba;
+   margin: 2rem auto 0 auto;
 
+ }
+
+ .title {
+   text-align: center;
+ }
+ 
+ .title h1 {
+   margin-top: 8rem ;
+   color: #fff;
+   font-weight: 300;
+   text-transform: uppercase;
+ }
+
+ .website-nav {
+   width: 80vw;
+   margin: 0 auto;
+   max-width: 1170px;
+   margin-top: 2rem;
+ }
+
+ .website-header {
+   display: flex;
+   justify-content: center;
+ }
+
+ .btn-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-bottom: 4rem;
+   flex-wrap: wrap;
+ }
+ .website-btn {
+   background: transparent;
+   border-color: transparent;
+   text-transform: uppercase;
+   font-size: 1.5rem;
+   letter-spacing: 0.1rem;
+   margin: 0 0.5rem;
+   transition: all 0.3s linear;
+   cursor: pointer;
+   padding: 1rem 0;
+   line-height: 2;
+   font-weight: 300;
+   color: #fff;
+
+ }
+ .website-btn:hover {
+   color: #2caeba;
+   box-shadow: 0 2px #2caeba;
+ }
+ .active-btn {
+   color:#2caeba;
+   box-shadow: 0 2px #2caeba;
+ }
+
+ .website-info {
+ }
+ 
+ .website-info h3 {
+   font-weight: 200;
+   color: #fff;
+   margin-bottom: 2rem;
+ }
+
+
+ .btn {
+   text-transform: uppercase;
+   background: #2caeba;
+   color: hsl(185, 94%, 87%);
+   padding: 0.7rem 1rem;
+   letter-spacing: 0.1rem;;
+   font-weight: 700;
+   -webkit-transition: all 0.3s linear;
+   transition: all 0.3s linear;
+   font-size: 0.875rem;
+   border: 2px solid transparent;
+   cursor: pointer;
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+   border-radius: 0.45rem;
+   display: block;
+   width: 9rem;
+   text-align: center;
+   margin: 0 auto;
+ }
+
+ .btn:hover {
+   color: hsl(184, 91%, 17%);
+   background: hsl(184, 80%, 74%);
+ }
+
+
+ @media screen and (max-width: 468px) {
+   .dot {
+     display: none;
+   }
+   span {
+     display: block;
+   }
+
+   .underline {
+    margin: 0 auto 0 auto;
+ 
   }
+ }
+ 
+ @media screen and (min-width: 992px) {
+   .section {
+     width: 95vw;
+   }
+ }
+ 
+ @media screen and (min-width: 800px) {
+   h1 {
+     font-size: 4rem;
+     line-height: 1;
+   }
+ 
+   h3 {
+     font-size: 1.75rem;
+     line-height: 1;
+   }
+ 
+ }
 
-  @media screen and (min-width: 800px) {
-    h1 {
-      font-size: 4rem;
-      line-height: 1;
-    }
-  
-    h3 {
-      font-size: 1.75rem;
-      line-height: 1;
-    }
-  
-  }
+ 
+ 
+ @media screen and (min-width: 992px) {
+   
+   .website-nav {
+     width: 90vw;
+     display: grid;
+     grid-template-columns: 200px 1fr;
+     column-gap: 4rem;
+   }
+   .btn-container {
+     flex-direction: column;
+     justify-content: flex-start;
+   }
+   .website-btn {
+     margin-bottom: 1rem;
+   }
+   .active-btn {
+     box-shadow: -2px 0 #2caeba;
+   }
+   .website-btn:hover {
+     box-shadow: -2px 0 #2caeba;
+   }
+ }
 
-  
-  
-  @media screen and (min-width: 992px) {
-    
-    .website-nav {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      column-gap: 4rem;
-    }
-    .btn-container {
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    .website-btn {
-      margin-bottom: 1rem;
-    }
-    .active-btn {
-      box-shadow: -2px 0 #2caeba;
-    }
-    .website-btn:hover {
-      box-shadow: -2px 0 #2caeba;
-    }
-  }
-
-  
+ 

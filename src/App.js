@@ -15,7 +15,6 @@ import Floods from './components/pages/Floods';
 import Droughts from './components/pages/Droughts';
 import Landslides from './components/pages/Landslides';
 import Navbar from './components/Navbar';
-import Sustainability from './components/pages/Sustainability';
 
 
 const App = () => {
@@ -26,7 +25,6 @@ const App = () => {
         <Routes>
           <Route path='/' exact element={<Home />}/>
           <Route path='/vitals' element={<Vitals />}/>
-          <Route path='/sustainability' element={<Sustainability />}/>
           <Route path='/climatechange' element={<ClimateChange />}/>
           <Route path='/worlddata' element={<WorldData />}/>
           <Route path='/severeweatheralerts' element={<SevereWeather />}/>

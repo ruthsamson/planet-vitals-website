@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Grid, ImageListItem, Box, Paper, ListItem } from '@mui/material'
+import { Grid, ImageListItem, Box, ImageListItemBar, Paper, ListItem } from '@mui/material'
 import climateChange from '../../images/climate-change.jpeg'
 import weather from '../../images/weather-forecast.png'
 import severeWeatherAlerts from '../../images/severe-weather.webp'
@@ -46,25 +46,6 @@ const Vitals = () => {
           ))}
         </Grid>
       </Box>
-      {/* <div className='vitals-list'>
-       <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-       {itemData.map((item) => (
-           <Grid item className='grid' xs={6}>
-           <Link to={`/${item.path}`}>
-             <ImageListItem className='content-wrapper' key={item.img}>
-              <div className='text-wrapper'>
-                 <h4>{item.title}</h4>
-               </div>
-               <img
-               className='vitals-img'
-               src= {item.img}
-               alt={item.title}/>
-             </ImageListItem>
-           </Link>
-           </Grid>
-       ))};
-       </Grid>
-      </div> */}
     </div>
   )
 }
