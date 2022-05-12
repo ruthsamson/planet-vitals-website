@@ -34,6 +34,7 @@ const WorldData = () => {
                 <Helmet>
                     <title>World Data</title>
                     <link rel="stylesheet" href="./css/ClimateChange.css"/>
+                    <link rel="stylesheet" href="./css/WorldData.css"/>
                 </Helmet>
                 <div className="title">
                     <h1>

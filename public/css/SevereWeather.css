@@ -1,0 +1,6 @@
+body {
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url("../page-images/severeWeather-homepage.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }

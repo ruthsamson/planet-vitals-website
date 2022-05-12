@@ -4,7 +4,7 @@ import { Grid, ImageListItem, Box, ImageListItemBar, Paper, ListItem } from '@mu
 import climateChange from '../../images/climate-change.jpeg'
 import weather from '../../images/weather-forecast.png'
 import severeWeatherAlerts from '../../images/severe-weather.webp'
-import worldData from '../../images/world-data.png'
+import worldData from '../../images/world-data.jpeg'
 import wildfire from '../../images/wildfire.jpeg'
 import airQuality from '../../images/air-quality.jpeg'
 import earthquake from '../../images/earthquake.jpeg'

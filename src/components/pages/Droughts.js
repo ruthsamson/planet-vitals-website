@@ -33,6 +33,7 @@ const Droughts = () => {
                 <Helmet>
                     <title>Droughts</title>
                     <link rel="stylesheet" href="./css/ClimateChange.css"/>
+                    <link rel="stylesheet" href="./css/Droughts.css"/>
                 </Helmet>
                 <div className="title">
                     <h1>

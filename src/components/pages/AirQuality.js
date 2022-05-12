@@ -33,6 +33,7 @@ const AirQuality = () => {
                 <Helmet>
                     <title>Air Quality</title>
                     <link rel="stylesheet" href="./css/ClimateChange.css"/>
+                    <link rel="stylesheet" href="./css/AirQuality.css"/>
                 </Helmet>
                 <div className="title">
                     <h1>

@@ -32,6 +32,7 @@ const Earthquakes = () => {
                 <Helmet>
                     <title>Earthquakes</title>
                     <link rel="stylesheet" href="./css/ClimateChange.css"/>
+                    <link rel="stylesheet" href="./css/Earthquakes.css"/>
                 </Helmet>
                 <div className="title">
                     <h1>
