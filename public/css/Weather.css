@@ -8,7 +8,7 @@ body {
     background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url("../page-images/weather-homepage.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-
+    height: 100%;
   }
 
   p {
@@ -96,3 +96,9 @@ body {
 .bold {
     font-weight: 700;
 }
+
+@media only screen and (min-width: 1609px) {
+   body {
+       height: 100vh;
+   }
+  }
