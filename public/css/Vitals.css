@@ -1,7 +1,6 @@
 
 body {
     background-color: rgb(0, 0, 0);
-    /* background-image: url('../page-images/vitals.jpeg'); */
     background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)), url('../page-images/vitals.jpeg');
     background-repeat: no-repeat;
     background-position: center;

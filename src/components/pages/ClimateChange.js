@@ -15,7 +15,7 @@ const ClimateChange = () => {
 
     const fetchInfo = async () => {
         setInfo(climateChangeInfo);
-        setLoading(false);
+        setLoading(false)
     }
     useEffect
     (() => {
@@ -29,7 +29,6 @@ const ClimateChange = () => {
             </section>
         )
     }
-
     const{ title, header, url, img} = info[value]
     return (
         <section className="section">

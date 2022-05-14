@@ -21,7 +21,7 @@
 }
 
 .hero-title {
-    color: white;
+    color: #f8f8f8;
     text-transform: uppercase;
     font-weight: 800 !important;
     font-size: 6rem !important;
@@ -36,12 +36,7 @@
     background-color: #85009B!important;
     font-weight: 800 !important;
     margin: 40px 10px 0px 10px !important;
-}
-
-.btn-help {
-    background-color: #0073D2 !important;
-    font-weight: 800 !important;
-    margin: 40px 10px 0px 10px !important;
+    color: #f8f8f8;
 }
 
 
