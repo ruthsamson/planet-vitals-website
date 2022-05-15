@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import Esri_3 from '../../images/floods-Esri.png'
-
+import Loading from "../Loading";
 
 const Floods = () => {
         const [loading, setLoading] = useState(true);
@@ -11,21 +11,21 @@ const Floods = () => {
     
         const fetchInfo = async () => {
             setInfo(floodsInfo);
-            setLoading(false);
         }
+       
         useEffect
         (() => {
             fetchInfo();
+            setTimeout(() => setLoading(false), 1000)
         }, [])
     
+      
         if(loading) {
             return (
-                <section className="section loading">
-                    <h1>Loading...</h1>
-                </section>
+                <Loading />
             )
         }
-    
+        
         const{ title, header, url, img} = info[value]
         return (
             <section className="section">

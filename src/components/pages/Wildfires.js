@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import AirNow from '../../images/wildfires-AirNow.png'
+import Loading from "../Loading";
 
 
 
@@ -12,21 +13,21 @@ const Wildfires = () => {
     
         const fetchInfo = async () => {
             setInfo(wildfiresInfo);
-            setLoading(false);
         }
+        
         useEffect
         (() => {
             fetchInfo();
+            setTimeout(() => setLoading(false), 1000)
         }, [])
     
+      
         if(loading) {
             return (
-                <section className="section loading">
-                    <h1>Loading...</h1>
-                </section>
+                <Loading />
             )
-        }
-    
+        } 
+
         const{ title, header, url, img} = info[value]
         return (
             <section className="section">

@@ -3,6 +3,7 @@ import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import GCDL from '../../images/worldData-GCDL.png'
 import NASA_2 from '../../images/worldData-NASA.png'
+import Loading from "../Loading";
 
 
 
@@ -13,18 +14,18 @@ const WorldData = () => {
     
         const fetchInfo = async () => {
             setInfo(worldDataInfo);
-            setLoading(false);
         }
+        
         useEffect
         (() => {
             fetchInfo();
+            setTimeout(() => setLoading(false), 1000)
         }, [])
     
+      
         if(loading) {
             return (
-                <section className="section loading">
-                    <h1>Loading...</h1>
-                </section>
+                <Loading />
             )
         }
     

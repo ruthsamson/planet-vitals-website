@@ -3,6 +3,7 @@ import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import Map from '../../images/volcanoes-Map.png'
 import Smithsonian from '../../images/volcanoes-Smithsonian.png'
+import Loading from "../Loading";
 
 
 
@@ -13,18 +14,18 @@ const Volcanoes = () => {
     
         const fetchInfo = async () => {
             setInfo(volcanoesInfo);
-            setLoading(false);
         }
+        
         useEffect
         (() => {
             fetchInfo();
+            setTimeout(() => setLoading(false), 1000)
         }, [])
     
+      
         if(loading) {
             return (
-                <section className="section loading">
-                    <h1>Loading...</h1>
-                </section>
+                <Loading />
             )
         }
     

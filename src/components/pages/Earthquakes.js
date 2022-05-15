@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import USGS from '../../images/earthquakes-USGS.png'
-
+import Loading from "../Loading";
 
 const Earthquakes = () => {
         const [loading, setLoading] = useState(true);
@@ -11,18 +11,19 @@ const Earthquakes = () => {
     
         const fetchInfo = async () => {
             setInfo(earthquakesInfo);
-            setLoading(false);
+
         }
+       
         useEffect
         (() => {
             fetchInfo();
+            setTimeout(() => setLoading(false), 1000)
         }, [])
     
+      
         if(loading) {
             return (
-                <section className="section loading">
-                    <h1>Loading...</h1>
-                </section>
+                <Loading />
             )
         }
     

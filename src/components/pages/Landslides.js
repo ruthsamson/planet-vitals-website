@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import NASA_3 from '../../images/landslides-NASA.png'
+import Loading from "../Loading";
 
 
 const Landslides = () => {
@@ -11,18 +12,18 @@ const Landslides = () => {
     
         const fetchInfo = async () => {
             setInfo(landslidesInfo);
-            setLoading(false);
         }
+       
         useEffect
         (() => {
             fetchInfo();
+            setTimeout(() => setLoading(false), 1000)
         }, [])
     
+      
         if(loading) {
             return (
-                <section className="section loading">
-                    <h1>Loading...</h1>
-                </section>
+                <Loading />
             )
         }
     

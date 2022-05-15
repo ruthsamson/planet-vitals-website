@@ -3,7 +3,7 @@ import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import UNL from '../../images/droughts-UNL.png'
 import NOAA_2 from '../../images/droughts-NOAA.png'
-
+import Loading from "../Loading";
 
 const Droughts = () => {
         const [loading, setLoading] = useState(true);
@@ -12,18 +12,18 @@ const Droughts = () => {
     
         const fetchInfo = async () => {
             setInfo(droughtsInfo);
-            setLoading(false);
         }
+        
         useEffect
         (() => {
             fetchInfo();
+            setTimeout(() => setLoading(false), 1000)
         }, [])
     
+      
         if(loading) {
             return (
-                <section className="section loading">
-                    <h1>Loading...</h1>
-                </section>
+                <Loading />
             )
         }
     

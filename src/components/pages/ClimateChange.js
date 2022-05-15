@@ -4,6 +4,7 @@ import EPA from '../../images/climateChange-EPA.png';
 import NOAA from '../../images/climateChange-NOAA.png';
 import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
+import Loading from "../Loading";
 
 
 
@@ -14,21 +15,22 @@ const ClimateChange = () => {
     const [value, setValue] = useState(0);
 
     const fetchInfo = async () => {
-        setInfo(climateChangeInfo);
-        setLoading(false)
+        setInfo(climateChangeInfo)
     }
+    
     useEffect
     (() => {
         fetchInfo();
+        setTimeout(() => setLoading(false), 1000)
     }, [])
 
+  
     if(loading) {
         return (
-            <section className="section loading">
-                <h1>Loading...</h1>
-            </section>
+            <Loading />
         )
     }
+
     const{ title, header, url, img} = info[value]
     return (
         <section className="section">

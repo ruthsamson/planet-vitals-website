@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Grid, ImageListItem, Box, ImageListItemBar, Paper, ListItem } from '@mui/material'
 import climateChange from '../../images/climate-change.jpeg'
-import weather from '../../images/weather-forecast.png'
+import weather from '../../images/weather-check.jpeg'
 import severeWeatherAlerts from '../../images/severe-weather.webp'
 import worldData from '../../images/world-data.jpeg'
 import wildfire from '../../images/wildfire.jpeg'
@@ -14,11 +14,25 @@ import flood from '../../images/flood.jpeg'
 import storm from '../../images/storm.jpeg'
 import landslide from '../../images/landslide.jpeg'
 import Helmet from 'react-helmet'
+import Loading from '../Loading'
 
 
 
 const Vitals = () => {
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect
+    (() => {
+        setTimeout(() => setLoading(false), 1000)
+    }, [])
+
+  
+    if(loading) {
+        return (
+            <Loading />
+        )
+    }
   
   return (
     <div className='vitals'>
@@ -66,6 +80,13 @@ const itemData = [
     path: 'worlddata',
   },
 
+
+  {
+    img: weather,
+    title: 'Local Weather',
+    path: 'weather',
+  },
+
   {
     img: severeWeatherAlerts,
     title: 'Severe Weather',
@@ -73,11 +94,11 @@ const itemData = [
   },
 
   {
-    img: weather,
-    title: 'Weather Forecast',
-    path: 'weather',
+    img: storm,
+    title: 'Storms',
+    path: 'storms',
   },
-
+  
   {
     img: wildfire,
     title: 'Wildfires',
@@ -90,11 +111,6 @@ const itemData = [
     path: 'airquality',
   },
 
-  {
-    img: earthquake,
-    title: 'Earthquakes',
-    path: 'earthquakes',
-  },
 
   {
     img: volcano,
@@ -103,18 +119,17 @@ const itemData = [
   },
 
   {
-    img: storm,
-    title: 'Storms',
-    path: 'storms',
-  },
-
-  {
     img: flood,
     title: 'Floods',
     path: 'floods',
   },
 
-
+  {
+    img: earthquake,
+    title: 'Earthquakes',
+    path: 'earthquakes',
+  },
+  
   {
     img: drought,
     title: 'Droughts',

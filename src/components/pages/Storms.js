@@ -5,6 +5,7 @@ import Esri_4 from '../../images/storms-Esri.png'
 import Cyclocane from '../../images/storms-Cyclocane.png'
 import StormerSite from '../../images/storms-StormerSite.png'
 import NOAA_3 from '../../images/storms-NOAA.png'
+import Loading from "../Loading";
 
 
 
@@ -15,18 +16,18 @@ const Storms = () => {
     
         const fetchInfo = async () => {
             setInfo(stormsInfo);
-            setLoading(false);
         }
+        
         useEffect
         (() => {
             fetchInfo();
+            setTimeout(() => setLoading(false), 1000)
         }, [])
     
+      
         if(loading) {
             return (
-                <section className="section loading">
-                    <h1>Loading...</h1>
-                </section>
+                <Loading />
             )
         }
     
