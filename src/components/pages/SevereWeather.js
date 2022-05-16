@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import Esri from '../../images/severeWeather-Esri.png'
+import NOAA from '../../images/severeWeather-NOAA.png'
 import Loading from "../Loading";
 import { ArrowBack } from "@mui/icons-material";
 
@@ -32,7 +33,7 @@ const SevereWeather = () => {
             )
         }
     
-        const{ title, header, url, img} = info[value]
+        const{ title, header, details, url, img} = info[value]
         return (
             <section className="section">
                 <Helmet>
@@ -74,6 +75,7 @@ const SevereWeather = () => {
                     </div>
                     <article className="website-info">
                         <h3 className="website-header">{header}</h3>
+                        <p className="details">{details}</p>
                         <ImageListItem>
                             <img className='website-image' src={img} alt='Website homepage'/>
                             <ImageListItemBar
@@ -102,24 +104,19 @@ const SevereWeather = () => {
     const severeWeatherInfo = [
         {
             title: 'Esri',
-            header: 'Esri U.S. Severe Weather',
+            header: 'U.S. Severe Weather Tracker',
+            details: 'Map · Weather Watches and Warnings · Event Reports',
             url: 'https://experience.arcgis.com/experience/7e5454f17e3144f69696ff7220a2edce/page/PIM/?views=Home',
             img: Esri,
         },
-        // {
-        //     title: 'EPA',
-        //     header: 'United States Environmental Protection Agency (EPA)',
-        //     url: 'https://www.epa.gov/climatechange-science',
-        //     img: EPA,
-    
-        // },
-        // {
-        //     title: 'NOAA',
-        //     header: 'National Oceanic and Atmospheric Administration (NOAA) ',
-        //     url: 'https://www.climate.gov/',
-        //     img: NOAA,
-    
-        // },
+        {
+            title: 'NOAA',
+            header: "NOAA's Severe Weather Data Inventory",
+            details: 'Map · Historical Events Database',
+            url: 'https://www.ncei.noaa.gov/maps/swdi/',
+            img: NOAA,
+        },
+     
     ]
     
     

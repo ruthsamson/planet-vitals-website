@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Button, IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
-import UNL from '../../images/droughts-UNL.png'
 import NOAA_2 from '../../images/droughts-NOAA.png'
+import UNL from '../../images/droughts-UNL.png'
 import Loading from "../Loading";
 import { ArrowBack } from "@mui/icons-material";
 
@@ -31,7 +31,7 @@ const Droughts = () => {
             )
         }
     
-        const{ title, header, url, img} = info[value]
+        const{ title, header, details, url, img} = info[value]
         return (
             <section className="section">
                 <Helmet>
@@ -71,6 +71,7 @@ const Droughts = () => {
                     </div>
                     <article className="website-info">
                         <h3 className="website-header">{header}</h3>
+                        <p className="details">{details}</p>
                         <ImageListItem>
                             <img className='website-image' src={img} alt='Website homepage'/>
                             <ImageListItemBar
@@ -98,26 +99,21 @@ const Droughts = () => {
     
     const droughtsInfo = [
         {
-            title: 'U.S. Drought Monitor',
-            header: 'The National Drought Mitigation Center',
-            url: 'https://droughtmonitor.unl.edu/CurrentMap.aspx',
-            img: UNL,
+            title: 'NOAA',
+            header: 'National Integrated Drought Information System (NIDIS)',
+            details: 'Maps · Precipitation Data · Temperature Conditions · Severity Index · Drought Index ',
+            url: 'https://www.drought.gov/current-conditions',
+            img: NOAA_2,
         },
     
         {
-            title: 'NOAA',
-            header: 'National Oceanic and Atmospheric Administration (NOAA)',
-            url: 'https://www.climate.gov/maps-data/data-snapshots/data-source/drought-monitor',
-            img: NOAA_2,
+            title: 'NADM',
+            header: 'North America Drought Monitor',
+            details: 'Maps · Historical Data Comparisons · Intensity Levels · Time Series',
+            url: 'https://droughtmonitor.unl.edu/CurrentMap.aspx',
+            img: UNL,
     
         },
-        // {
-        //     title: 'NOAA',
-        //     header: 'National Oceanic and Atmospheric Administration (NOAA) ',
-        //     url: 'https://www.climate.gov/',
-        //     img: NOAA,
-    
-        // },
     ]
     
     

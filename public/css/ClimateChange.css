@@ -25,7 +25,7 @@
  }
 
 body {
-   background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)), url("../page-images/climateChange-homepage.jpeg");
+   background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)), url("../page-images/climateChange-homepage.jpeg");
    background-size: cover;
    background-repeat: no-repeat;
    height: 100vh;
@@ -127,8 +127,8 @@ body {
 
  .btn {
    text-transform: uppercase;
-   background: #2caeba;
-   color: hsl(185, 94%, 87%);
+   color: #000;
+   background-color: #e9af4a;   
    padding: 0.7rem 1rem;
    letter-spacing: 0.1rem;;
    font-weight: 700;
@@ -146,10 +146,10 @@ body {
  }
 
  .btn:hover {
-   color: hsl(184, 91%, 17%);
-   background: hsl(184, 80%, 74%);
+  background-color: #ecab3b;    
+  transform: scale(1.08);
+  transition: 10ms ease-in-out;
  }
-
 
  @media screen and (max-width: 468px) {
    .dot {
@@ -161,8 +161,18 @@ body {
 
    .underline {
     margin: 0 auto 0 auto;
- 
   }
+
+  .details {
+    font-size: 1.2rem !important;
+  }
+
+  .btn {
+   font-size: 0.75rem;
+   padding: 0.3rem 0.5rem;
+   width: 6rem;
+  }
+
 
  }
  
@@ -192,8 +202,6 @@ body {
    }
  
  }
-
- 
  
  @media screen and (min-width: 992px) {
    

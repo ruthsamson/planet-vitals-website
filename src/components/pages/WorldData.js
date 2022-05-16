@@ -33,7 +33,7 @@ const WorldData = () => {
             )
         }
     
-        const{ title, header, url, img} = info[value]
+        const{ title, header, details, url, img} = info[value]
         return (
             <section className="section">
                 <Helmet>
@@ -75,6 +75,7 @@ const WorldData = () => {
                     </div>
                     <article className="website-info">
                         <h3 className="website-header">{header}</h3>
+                        <p className="details">{details}</p>
                         <ImageListItem>
                             <img className='website-image' src={img} alt='Website homepage'/>
                             <ImageListItemBar
@@ -104,23 +105,18 @@ const WorldData = () => {
         {
             title: 'Global Change Data Lab',
             header: 'Our World In Data',
+            details: 'Pollution · Impact Reports · Energy · Fossil Fuels · Biodiversity',
             url: 'https://ourworldindata.org/',
             img: GCDL,
         },
         {
             title: 'NASA',
-            header: 'National Aeronautics and Space Administration (NASA)',
+            header: 'Eyes on the Earth',
+            details: 'Satellites Now · Air Temperature · Soil Moisture · Ozone · Gravity Field',
             url: 'https://climate.nasa.gov/earth-now/#/vitalsign?vitalsign=satellites&altid=0&animating=f&start=&end=',
             img: NASA_2,
     
         },
-        // {
-        //     title: 'NOAA',
-        //     header: 'National Oceanic and Atmospheric Administration (NOAA) ',
-        //     url: 'https://www.climate.gov/',
-        //     img: NOAA,
-    
-        // },
     ]
     
     

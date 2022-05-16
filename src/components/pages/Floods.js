@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import Esri_3 from '../../images/floods-Esri.png'
+import FEMA from '../../images/floods-FEMA.png'
 import Loading from "../Loading";
 import { ArrowBack } from "@mui/icons-material";
 
@@ -30,7 +31,7 @@ const Floods = () => {
             )
         }
         
-        const{ title, header, url, img} = info[value]
+        const{ title, header, details, url, img} = info[value]
         return (
             <section className="section">
                 <Helmet>
@@ -70,6 +71,7 @@ const Floods = () => {
                     </div>
                     <article className="website-info">
                         <h3 className="website-header">{header}</h3>
+                        <p className="details">{details}</p>
                         <ImageListItem>
                             <img className='website-image' src={img} alt='Website homepage'/>
                             <ImageListItemBar
@@ -98,24 +100,18 @@ const Floods = () => {
     const floodsInfo = [
         {
             title: 'Esri',
-            header: 'Esri Flooding',
+            header: 'Flooding Map',
+            details: 'Map · Flash Flood Warnings · Live Stream Gauges',
             url: 'https://www.esri.com/en-us/disaster-response/disasters/flooding',
             img: Esri_3,
         },
-        // {
-        //     title: 'EPA',
-        //     header: 'United States Environmental Protection Agency (EPA)',
-        //     url: 'https://www.epa.gov/climatechange-science',
-        //     img: EPA,
-    
-        // },
-        // {
-        //     title: 'NOAA',
-        //     header: 'National Oceanic and Atmospheric Administration (NOAA) ',
-        //     url: 'https://www.climate.gov/',
-        //     img: NOAA,
-    
-        // },
+        {
+            title: 'FEMA',
+            header: 'National Flood Hazard Layer Viewer',
+            details: 'Map · Flood Hazard Layer',
+            url: 'https://hazards-fema.maps.arcgis.com/apps/webappviewer/index.html?id=8b0adb51996444d4879338b5529aa9cd',
+            img: FEMA,
+        },
     ]
     
     

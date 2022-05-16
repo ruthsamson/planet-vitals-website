@@ -106,24 +106,24 @@ const ClimateChange = () => {
 const climateChangeInfo = [
     {
         title: 'NASA',
-        header: 'National Aeronautics and Space Administration (NASA)',
-        details:'',
+        header: 'Global Climate Change',
+        details:'CO2 Levels · Global Temperature · Ice Data · Sea Level · Ocean Heat',
         url: 'https://climate.nasa.gov',
         img: NASA,
     },
 
     {
         title: 'EPA',
-        header: 'United States Environmental Protection Agency (EPA)',
-        details:'',
+        header: 'Climate Change Science',
+        details:'Causes · Impact · Indicators · Risk Analysis',
         url: 'https://www.epa.gov/climatechange-science',
         img: EPA,
 
     },
     {
         title: 'NOAA',
-        header: 'National Oceanic and Atmospheric Administration (NOAA)',
-        details:'',
+        header: 'Global Climate Dashboard',
+        details:'Greenhouse Gases · Ice Data · Snow · Sunlight · Surface Temperature',
         url: 'https://www.climate.gov/',
         img: NOAA,
 

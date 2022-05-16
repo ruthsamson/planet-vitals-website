@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import NASA_3 from '../../images/landslides-NASA.png'
+import USGS from '../../images/landslides-USGS.png'
 import Loading from "../Loading";
 import { ArrowBack } from "@mui/icons-material";
 
@@ -31,7 +32,7 @@ const Landslides = () => {
             )
         }
     
-        const{ title, header, url, img} = info[value]
+        const{ title, header, details, url, img} = info[value]
         return (
             <section className="section">
                 <Helmet>
@@ -71,6 +72,7 @@ const Landslides = () => {
                     </div>
                     <article className="website-info">
                         <h3 className="website-header">{header}</h3>
+                        <p className="details">{details}</p>
                         <ImageListItem>
                             <img className='website-image' src={img} alt='Website homepage'/>
                             <ImageListItemBar
@@ -99,23 +101,18 @@ const Landslides = () => {
     const landslidesInfo = [
         {
             title: 'NASA',
-            header: 'National Aeronautics and Space Administration (NASA) Landslide Viewer',
+            header: 'NASA Landslide Viewer',
+            details: 'Map · Historical Landslide Data · Trigger and Event Description',
             url: 'https://maps.nccs.nasa.gov/arcgis/apps/webappviewer/index.html?id=824ea5864ec8423fb985b33ee6bc05b7',
             img: NASA_3,
         },
-        // {
-        //     title: 'EPA',
-        //     header: 'United States Environmental Protection Agency (EPA)',
-        //     url: 'https://www.epa.gov/climatechange-science',
-        //     img: EPA,
-    
-        // },
-        // {
-        //     title: 'NOAA',
-        //     header: 'National Oceanic and Atmospheric Administration (NOAA) ',
-        //     url: 'https://www.climate.gov/',
-        //     img: NOAA,
-        // },
+        {
+            title: 'USGS',
+            header: 'U.S. Landslide Inventory',
+            details: 'Map · Historical Landslide Data',
+            url: 'https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=ae120962f459434b8c904b456c82669d',
+            img: USGS,
+        },
     ]
     
     

@@ -24,7 +24,7 @@
 }
 
 .navbar-item:hover {
-    color: #e3b86f !important;
+    color: #e9af4a !important;
     transform: scale(1.08);
     transition: 10ms ease-in-out;
 }
@@ -55,4 +55,10 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 300 !important;
+}
+
+.sidebar .list .list-item:hover {
+    color: #e9af4a !important;
+    transform: scale(1.08) !important;
+    transition: 10ms ease-in-out !important;
 }

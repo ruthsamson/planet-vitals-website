@@ -34,13 +34,13 @@
 
 .btn-vitals {
     color: #000!important;
-    background-color: #e3b86f !important;    
+    background-color: #e9af4a !important;    
     font-weight: 800 !important;
     margin: 40px 10px 0px 10px !important;
 }
 
 .btn-vitals:hover {
-    background-color: #dcac59 !important;    
+    background-color: #ecab3b !important;    
     transform: scale(1.08);
     transition: 10ms ease-in-out;
 }

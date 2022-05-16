@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import AirNow from '../../images/wildfires-AirNow.png'
+import USDA from '../../images/wildfires-USDA.png'
 import Loading from "../Loading";
 import { ArrowBack } from "@mui/icons-material";
 
@@ -32,7 +33,7 @@ const Wildfires = () => {
             )
         } 
 
-        const{ title, header, url, img} = info[value]
+        const{ title, header, details, url, img} = info[value]
         return (
             <section className="section">
                 <Helmet>
@@ -72,6 +73,7 @@ const Wildfires = () => {
                     </div>
                     <article className="website-info">
                         <h3 className="website-header">{header}</h3>
+                        <p className="details">{details}</p>
                         <ImageListItem>
                             <img className='website-image' src={img} alt='Website homepage'/>
                             <ImageListItemBar
@@ -101,23 +103,19 @@ const Wildfires = () => {
         {
             title: 'AirNow',
             header: 'Fire and Smoke Map',
+            details: 'Map · Fire Reports · Acres Burned · Percent Contained · Smoke Levels',
             url: 'https://fire.airnow.gov/',
             img: AirNow,
         },
-        // {
-        //     title: 'EPA',
-        //     header: 'United States Environmental Protection Agency (EPA)',
-        //     url: 'https://www.epa.gov/climatechange-science',
-        //     img: EPA,
-    
-        // },
-        // {
-        //     title: 'NOAA',
-        //     header: 'National Oceanic and Atmospheric Administration (NOAA) ',
-        //     url: 'https://www.climate.gov/',
-        //     img: NOAA,
-    
-        // },
+       
+        {
+            title: 'USDA',
+            header: 'U.S. Forest Service Wildfire Map',
+            details: 'Map · Fire Reports · Acres Burned · Preparedness Level · Estimated Cost',
+            url: 'https://www.fs.usda.gov/science-technology/fire/information',
+            img: USDA,
+        },
+       
     ]
     
     

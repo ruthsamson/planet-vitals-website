@@ -35,7 +35,7 @@ const Storms = () => {
             )
         }
     
-        const{ title, header, url, img} = info[value]
+        const{ title, header, details, url, img} = info[value]
         return (
             <section className="section">
                 <Helmet>
@@ -75,6 +75,7 @@ const Storms = () => {
                     </div>
                     <article className="website-info">
                         <h3 className="website-header">{header}</h3>
+                        <p className="details">{details}</p>
                         <ImageListItem>
                             <img className='website-image' src={img} alt='Website homepage'/>
                             <ImageListItemBar
@@ -103,25 +104,29 @@ const Storms = () => {
     const stormsInfo = [
         {
             title: 'Esri',
-            header: 'Esri Hurricanes and Cyclones',
+            header: 'Hurricanes and Cyclones Tracker',
+            details: 'Map · Watches and Warnings · Development Label · Storm Type',
             url: 'https://www.esri.com/en-us/disaster-response/disasters/hurricanes',
             img: Esri_4,
         },
         {
             title: 'Cyclocane',
             header: 'International Hurricane/Cyclone/Typhoon Tracking Map',
+            details: 'Map · Season Data · Warnings',
             url: 'https://www.cyclocane.com/',
             img: Cyclocane,
         },
         {
             title: 'StormerSite',
             header: 'Hail, Wind, and Tornado Reports',
+            details: 'Map · Event Reports',
             url: 'https://www.stormersite.com/hailmap',
             img: StormerSite,
         },
         {
             title: 'NOAA',
-            header: 'National Oceanic and Atmospheric Administration (NOAA)',
+            header: 'Daily U.S. Snowfall and Snow Depth Tracker',
+            details: 'Map · Historical Database · Event Reports',
             url: 'https://www.ncei.noaa.gov/access/monitoring/daily-snow/',
             img: NOAA_3,
         },

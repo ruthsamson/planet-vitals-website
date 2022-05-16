@@ -3,6 +3,7 @@ import { Button, IconButton, ImageListItem, ImageListItemBar } from "@mui/materi
 import Helmet from "react-helmet";
 import Map from '../../images/volcanoes-Map.png'
 import Smithsonian from '../../images/volcanoes-Smithsonian.png'
+import NOAA from '../../images/volcanoes-NOAA.png'
 import Loading from "../Loading";
 import { ArrowBack } from "@mui/icons-material";
 
@@ -33,7 +34,7 @@ const Volcanoes = () => {
             )
         }
     
-        const{ title, header, url, img} = info[value]
+        const{ title, header, details, url, img} = info[value]
         return (
             <section className="section">
                 <Helmet>
@@ -73,6 +74,7 @@ const Volcanoes = () => {
                     </div>
                     <article className="website-info">
                         <h3 className="website-header">{header}</h3>
+                        <p className="details">{details}</p>
                         <ImageListItem>
                             <img className='website-image' src={img} alt='Website homepage'/>
                             <ImageListItemBar
@@ -102,23 +104,25 @@ const Volcanoes = () => {
         {
             title: 'Data Map',
             header: 'Volcanoes and Earthquakes Data Map',
+            details: 'Map · Watches and Warnings · Event Development Data · Magnitude Levels',
             url: 'https://www.volcanoesandearthquakes.com/',
             img: Map,
         },
         {
             title: 'Smithsonian',
             header: 'Smithsonian Global Volcanism Program',
+            details: 'Map · Eruption Time Tracker · Volcano Database · Weekly Event Reports',
             url: 'https://volcano.si.edu/gvp_currenteruptions.cfm',
             img: Smithsonian,
-    
         },
-        // {
-        //     title: 'NOAA',
-        //     header: 'National Oceanic and Atmospheric Administration (NOAA) ',
-        //     url: 'https://www.climate.gov/',
-        //     img: NOAA,
-    
-        // },
+        {
+            title: 'NOAA',
+            header: 'Volcano Event Database',
+            details: 'Event Search Tool · Historical Database · Damage Data',
+            url: 'https://www.ngdc.noaa.gov/hazel/view/hazards/volcano/event-search',
+            img: NOAA,
+        },
+
     ]
     
     

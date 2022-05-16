@@ -14,12 +14,11 @@ body {
     justify-content: center !important;
     align-items: center !important;
     font-weight: 800;
-    color: #e3b86f !important;
+    color: #e9af4a !important;
     font-size: 6rem;
     height: 60vh;  
 }
 
-/* e3b86f */
 .vitals-img{
     width: 400px !important;
     height: 400px !important;
@@ -43,7 +42,7 @@ body {
 
 .text-wrapper h4{
     text-align: center;
-    color:  #e3b86f;
+    color:  #e9af4a;
     font-size: 2rem;
     margin: 30px;
     text-transform: uppercase;
