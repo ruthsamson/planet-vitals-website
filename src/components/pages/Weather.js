@@ -14,7 +14,7 @@ const Weather = () => {
 
 
   const api_key = process.env.API_KEY;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=f132d7ee2b8a8baf6356ff36e5589a68&units=imperial`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api_key}&units=imperial`;
 
 
   const getData = async (e) => {
