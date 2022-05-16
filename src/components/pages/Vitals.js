@@ -13,7 +13,7 @@ import drought from '../../images/drought.jpeg'
 import flood from '../../images/flood.jpeg'
 import storm from '../../images/storm.jpeg'
 import landslide from '../../images/landslide.jpeg'
-import Helmet from 'react-helmet'
+import { Helmet, HelmetProvider} from "react-helmet-async";
 import Loading from '../Loading'
 
 
@@ -34,32 +34,34 @@ const Vitals = () => {
     }
   
   return (
-    <div className='vitals'>
-      <Helmet>
-        <title>Vitals</title>
-        <link rel="stylesheet" href="./css/Vitals.css"/>
-      </Helmet>
-      <h1 className='vitals-title'>Vitals</h1>
-      <Box sx={{flexGrow: 1}}>
-        <Grid className='grid' container spacing={{xs: 2, md: 3}} columns={{xs: 4, sm: 8, md: 12}}>
-          {itemData.map((item, index) => (
-            <Grid className='grid' item xs={4} sm={8} md={4} key={index}>
-              <Link to={`/${item.path}`}>
-                <ImageListItem className='content-wrapper' key={item.img}>
-                  <div className='text-wrapper'>
-                     <h4>{item.title}</h4>
-                   </div>
-                   <img
-                   className='vitals-img'
-                   src= {item.img}
-                   alt={item.title}/>
-                  </ImageListItem>
-                </Link>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-    </div>
+    <HelmetProvider>
+      <div className='vitals'>
+        <Helmet>
+          <title>Vitals</title>
+          <link rel="stylesheet" href="./css/Vitals.css"/>
+        </Helmet>
+        <h1 className='vitals-title'>Vitals</h1>
+        <Box sx={{flexGrow: 1}}>
+          <Grid className='grid' container spacing={{xs: 2, md: 3}} columns={{xs: 4, sm: 8, md: 12}}>
+            {itemData.map((item, index) => (
+              <Grid className='grid' item xs={4} sm={8} md={4} key={index}>
+                <Link to={`/${item.path}`}>
+                  <ImageListItem className='content-wrapper' key={item.img}>
+                    <div className='text-wrapper'>
+                      <h4>{item.title}</h4>
+                    </div>
+                    <img
+                    className='vitals-img'
+                    src= {item.img}
+                    alt={item.title}/>
+                    </ImageListItem>
+                  </Link>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      </div>
+    </HelmetProvider>
   )
 }
 

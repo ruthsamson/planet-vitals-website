@@ -17,6 +17,7 @@ const Home = () => {
             <Loading />
         )
     }
+    
   return (
     <div className='home'>
       <HeroSection />
