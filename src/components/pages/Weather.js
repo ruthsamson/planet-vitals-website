@@ -14,7 +14,7 @@ const Weather = () => {
 
 
   const api_key = process.env.API_KEY;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api_key}&units=imperial`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=f132d7ee2b8a8baf6356ff36e5589a68&units=imperial`;
 
 
   const getData = async (e) => {
@@ -64,7 +64,7 @@ const Weather = () => {
           <input 
           value={location} 
           onChange={e => setLocation(e.target.value)}
-          placeholder="Enter Location" 
+          placeholder="Enter City" 
           type="text" 
           />
           <button 
@@ -87,15 +87,15 @@ const Weather = () => {
         </div>
         {data.name !== undefined &&
         <div className="bottom">
-          <div className="feels-like">
+          <div className="feels-like bottom-text">
             {data.main ? <p className="bold">{data.main.feels_like.toFixed()}</p> : null}
             <p>Feels Like</p>
           </div>
-          <div className="humidity">
+          <div className="humidity bottom-text">
             {data.main ? <p className="bold">{data.main.humidity}%</p> : null}
             <p>Humidity</p>
           </div>
-          <div className="wind">
+          <div className="wind bottom-text">
             {data.wind ? <p className="bold">{data.wind.speed.toFixed()} MPH</p> : null}
             <p>Winds</p>
           </div>

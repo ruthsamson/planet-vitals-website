@@ -22,7 +22,7 @@ body {
   .back Button{
     font-weight: 300;
     color: #f8f8f8;
-    margin-top: 10rem;
+    margin-top: 8rem;
     margin-left: 2rem;
    }
   
@@ -48,7 +48,6 @@ body {
     border-radius: 25px;
     border: 1px solid rgba(255, 255, 255, 0.8);
     background:rgba(255, 255, 255, 0.1);
-    margin-top: 10rem;
     color: #f8f8f8;
 }
 
@@ -113,20 +112,34 @@ body {
 
 @media screen and (max-width: 418px) {
    .search .btn {
-        margin-top: 2rem;
-    } 
-
-    .weather .description {
         margin-top: 1.5rem;
-        right: -10%;
-        transform: rotate(0deg);
-    }
+    } 
 
     .weather .bottom {
-        display: flex;
-        flex-direction: column;
-
+        padding: 0.5rem;
     } 
+
+    .search input {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+
+    }
+
+    .back Button{
+        margin-top: 6rem;
+       }
+
+       p {
+        font-size: 1.6rem;
+    }
+  
+    h1 {
+        font-size: 4rem;
+    }
+
+    .bottom-text p{
+        font-size: 1.2rem;
+    }
 
   }
 

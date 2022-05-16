@@ -5,3 +5,11 @@ body {
     height: 100vh;
  
   }
+
+  @media screen and (max-width: 468px) {
+    
+    .title span{
+        font-size: 2.5rem;
+    }
+
+}
