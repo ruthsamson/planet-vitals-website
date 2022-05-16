@@ -4,16 +4,12 @@ body {
 
 }
 
-.loading {
-
-}
-
 .loading img{
     margin: 0 auto;
     display: flex;
     justify-self: center;
     align-items: center;
-    margin-top: 18rem;
+    margin-top: 20rem;
 }
 
 
