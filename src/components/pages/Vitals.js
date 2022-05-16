@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Grid, ImageListItem, Box, ImageListItemBar, Paper, ListItem } from '@mui/material'
+import { Grid, ImageListItem, Box, } from '@mui/material'
 import climateChange from '../../images/climate-change.jpeg'
 import weather from '../../images/weather-check.jpeg'
 import severeWeatherAlerts from '../../images/severe-weather.webp'
@@ -27,7 +27,6 @@ const Vitals = () => {
         setTimeout(() => setLoading(false), 1000)
     }, [])
 
-  
     if(loading) {
         return (
             <Loading />

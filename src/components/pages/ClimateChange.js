@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import NASA from '../../images/climateChange-NASA.png';
 import EPA from '../../images/climateChange-EPA.png';
 import NOAA from '../../images/climateChange-NOAA.png';
-import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
+import { Button, IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import Loading from "../Loading";
+import { ArrowBack } from "@mui/icons-material";
+
 
 
 
@@ -24,14 +26,17 @@ const ClimateChange = () => {
         setTimeout(() => setLoading(false), 1000)
     }, [])
 
-  
+    const handleClick = () => {
+        window.history.back();
+    }
+ 
     if(loading) {
         return (
             <Loading />
         )
     }
 
-    const{ title, header, url, img} = info[value]
+    const{ title, header, details, url, img} = info[value]
     return (
         <section className="section">
             <Helmet>
@@ -45,6 +50,16 @@ const ClimateChange = () => {
                     <span>Change</span>
                     <div className="underline"></div>
                 </h1>
+            </div>
+            <div className="back">
+                <Button  className='btn-vitals'
+                onClick={handleClick}
+                variant="text" 
+                size='large' 
+                startIcon={<ArrowBack />} 
+                >
+                    Go back to Vitals
+                </Button>            
             </div>
             <div className="website-nav">
                 <div className="btn-container">
@@ -62,6 +77,7 @@ const ClimateChange = () => {
                 </div>
                 <article className="website-info">
                     <h3 className="website-header">{header}</h3>
+                    <p className="details">{details}</p>
                     <ImageListItem>
                         <img className='website-image' src={img} alt='Website homepage'/>
                         <ImageListItemBar
@@ -91,6 +107,7 @@ const climateChangeInfo = [
     {
         title: 'NASA',
         header: 'National Aeronautics and Space Administration (NASA)',
+        details:'',
         url: 'https://climate.nasa.gov',
         img: NASA,
     },
@@ -98,6 +115,7 @@ const climateChangeInfo = [
     {
         title: 'EPA',
         header: 'United States Environmental Protection Agency (EPA)',
+        details:'',
         url: 'https://www.epa.gov/climatechange-science',
         img: EPA,
 
@@ -105,6 +123,7 @@ const climateChangeInfo = [
     {
         title: 'NOAA',
         header: 'National Oceanic and Atmospheric Administration (NOAA)',
+        details:'',
         url: 'https://www.climate.gov/',
         img: NOAA,
 

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import logo from '../images/earth-logo.png'
 import { Link } from 'react-router-dom';
 import './Navbar.css'
@@ -10,37 +9,24 @@ import Sidebar from './Sidebar';
 
 const Navbar = () => {
 
-  const pages = [
-      {
-          title: 'Home',
-          path: ''
-      },
-
-      {
-        title: 'Vitals',
-        path: 'vitals'
-      },
-
-      // {
-      //   title: 'Sustainability',
-      //   path: 'sustainability'
-      // }
-    ];
-
-    const [value, setValue] = useState();
-
     const theme = useTheme();
 
     const screenSizeMatch = useMediaQuery(theme.breakpoints.down('md'));
+
+    const homeClick = () => {
+      window.location.href ='/';
+    }
+
+    const vitalsClick = () => {
+      window.location.href = '/vitals';
+    }
 
   return (
     <div className='root'>
       <AppBar className='navbar'>
           <Toolbar>
           <Link to='/'>
-            <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
               <img src={logo} alt='logo' className='navbar-logo'/>
-            </IconButton>
           </Link>
             {screenSizeMatch ? (
               <>
@@ -48,17 +34,9 @@ const Navbar = () => {
               </>
               ) : (
                 <>
-                  <Tabs 
-                    className='navbar-container'
-                    value={value}
-                    onChange={(e, value) => setValue(value)}
-                    indicatorColor='secondary'
-                  >
-                    {pages.map((page, index) => (
-                     <Link to={`/${page.path}`}>
-                         <Tab key={index} className='navbar-item' label={page.title} />
-                     </Link>
-                    ))}
+                  <Tabs className='navbar-container'>
+                    <Tab className='navbar-item' label='Home' onClick={homeClick}/>
+                    <Tab className='navbar-item' label='Vitals' onClick={vitalsClick}/>
                   </Tabs>
                 </>
               )

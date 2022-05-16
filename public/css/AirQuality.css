@@ -1,7 +1,6 @@
 body {
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url("../page-images/airQuality-homepage.jpeg");
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url("../page-images/airQuality-homepage.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
- 
   }

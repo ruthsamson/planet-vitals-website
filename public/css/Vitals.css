@@ -19,6 +19,7 @@ body {
     height: 60vh;  
 }
 
+/* e3b86f */
 .vitals-img{
     width: 400px !important;
     height: 400px !important;
@@ -32,7 +33,7 @@ body {
 
 .vitals-img:hover {
     transform: scale(1.05);
-    transition: 0.5s ease-in-out;
+    transition: 20ms ease-out;
 }
 
 .vitals-list {

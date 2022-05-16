@@ -17,11 +17,6 @@ const Sidebar = () => {
           title: 'Vitals',
           path: 'vitals'
         },
-  
-        // {
-        //   title: 'Sustainability',
-        //   path: 'sustainability'
-        // }
       ];
 
     const [openDrawer, setOpenDrawer] = useState(false);
@@ -31,21 +26,19 @@ const Sidebar = () => {
         <Drawer 
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
+        className='sidebar'
         >
-            <List>
+            <List className='list'>
                 {pages.map((page, index) => (
                     <ListItemButton key={index} onClick={() => setOpenDrawer(false)}>
-                        <ListItemIcon>
                             <Link to={`/${page.path}`} style={{textDecoration: 'none'}}>
-                                <ListItemText>
+                                <ListItemText className='list-item'>
                                     {page.title}
                                 </ListItemText>
                             </Link>
-                        </ListItemIcon>
                     </ListItemButton>
                 
                 ))}
-                
             </List>
         </Drawer>
         <IconButton className='hamburger' onClick={() => setOpenDrawer(!openDrawer)}>

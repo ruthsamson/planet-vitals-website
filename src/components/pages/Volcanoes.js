@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
+import { Button, IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import Map from '../../images/volcanoes-Map.png'
 import Smithsonian from '../../images/volcanoes-Smithsonian.png'
 import Loading from "../Loading";
+import { ArrowBack } from "@mui/icons-material";
 
 
 
@@ -22,6 +23,9 @@ const Volcanoes = () => {
             setTimeout(() => setLoading(false), 1000)
         }, [])
     
+        const handleClick = () => {
+            window.history.back();
+        }
       
         if(loading) {
             return (
@@ -42,6 +46,16 @@ const Volcanoes = () => {
                         <span>Volcanoes</span>
                         <div className="underline"></div>
                     </h1>
+                </div>
+                <div className="back">
+                    <Button  className='btn-vitals'
+                    onClick={handleClick}
+                    variant="text" 
+                    size='large' 
+                    startIcon={<ArrowBack />} 
+                    >
+                        Go back to Vitals
+                    </Button>            
                 </div>
                 <div className="website-nav">
                     <div className="btn-container">

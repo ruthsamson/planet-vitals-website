@@ -1,21 +1,25 @@
 body {
-    background-color: black !important;
+    background-color: #000 !important;
     color: #f8f8f8;
 
 }
 
-.loading h1{
-    text-align: center;
+.loading {
+
+}
+
+.loading img{
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    margin-top: 25rem;
-    font-size: 4rem
+    justify-self: center;
+    align-items: center;
+    margin-top: 18rem;
 }
 
 
 
 @media screen and (max-width: 468px) {
-   .loading h1 {
+   .loading img {
        font-size: 2rem;
    }
   }

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Helmet from "react-helmet";
 import axios from "axios";
 import Loading from "../Loading";
+import { Button } from "@mui/material";
+import { ArrowBack } from "@mui/icons-material";
 
 
 const Weather = () => {
@@ -22,9 +24,14 @@ const Weather = () => {
           });
     setLocation('')
     }
+
   const handleClick = () => {
     getData();
   };
+
+  const handleClickBack = () => {
+    window.history.back();
+}
 
   useEffect(() => {
         setTimeout(() => setLoading(false), 1000)
@@ -42,6 +49,16 @@ const Weather = () => {
         <title>Weather Forecast</title>
         <link rel="stylesheet" href="./css/Weather.css" />
       </Helmet>
+      <div className="back">
+        <Button  className='btn-vitals'
+        onClick={handleClickBack}
+        variant="text" 
+        size='large' 
+        startIcon={<ArrowBack />} 
+        >
+          Go back to Vitals
+        </Button>            
+      </div>
       <div className="container">
         <div className="search">
           <input 
@@ -68,7 +85,7 @@ const Weather = () => {
             {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
         </div>
-        {data.name != undefined &&
+        {data.name !== undefined &&
         <div className="bottom">
           <div className="feels-like">
             {data.main ? <p className="bold">{data.main.feels_like.toFixed()}</p> : null}

@@ -33,10 +33,16 @@
 
 
 .btn-vitals {
-    background-color: #85009B!important;
+    color: #000!important;
+    background-color: #e3b86f !important;    
     font-weight: 800 !important;
     margin: 40px 10px 0px 10px !important;
-    color: #f8f8f8;
+}
+
+.btn-vitals:hover {
+    background-color: #dcac59 !important;    
+    transform: scale(1.08);
+    transition: 10ms ease-in-out;
 }
 
 

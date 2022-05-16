@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
+import { Button, IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import Esri_3 from '../../images/floods-Esri.png'
 import Loading from "../Loading";
+import { ArrowBack } from "@mui/icons-material";
 
 const Floods = () => {
         const [loading, setLoading] = useState(true);
@@ -19,7 +20,10 @@ const Floods = () => {
             setTimeout(() => setLoading(false), 1000)
         }, [])
     
-      
+        const handleClick = () => {
+            window.history.back();
+        }
+        
         if(loading) {
             return (
                 <Loading />
@@ -39,6 +43,16 @@ const Floods = () => {
                         <span>Floods</span>
                         <div className="underline"></div>
                     </h1>
+                </div>
+                <div className="back">
+                    <Button  className='btn-vitals'
+                    onClick={handleClick}
+                    variant="text" 
+                    size='large' 
+                    startIcon={<ArrowBack />} 
+                    >
+                        Go back to Vitals
+                    </Button>            
                 </div>
                 <div className="website-nav">
                     <div className="btn-container">

@@ -19,6 +19,19 @@ body {
       font-size: 6rem;
   }
 
+  .back Button{
+    font-weight: 300;
+    color: #f8f8f8;
+    margin-top: 10rem;
+    margin-left: 2rem;
+   }
+  
+   .back Button:hover{
+      color: #2caeba !important;
+      transform: scale(1.08);
+      transition: 10ms ease-in-out;
+   }
+
   .weather {
       color: #f8f8f8;
   }
@@ -57,7 +70,7 @@ body {
 .search .btn:hover {
     background:rgba(255, 255, 255, 0);
     transform: scale(1.05);
-    transition: 5s ease-out;
+    transition: 10ms ease-out;
 }
 
 .container {
@@ -116,3 +129,4 @@ body {
     } 
 
   }
+

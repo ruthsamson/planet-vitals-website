@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
+import { Button, IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import Esri_4 from '../../images/storms-Esri.png'
 import Cyclocane from '../../images/storms-Cyclocane.png'
 import StormerSite from '../../images/storms-StormerSite.png'
 import NOAA_3 from '../../images/storms-NOAA.png'
 import Loading from "../Loading";
+import { ArrowBack } from "@mui/icons-material";
 
 
 
@@ -24,6 +25,9 @@ const Storms = () => {
             setTimeout(() => setLoading(false), 1000)
         }, [])
     
+        const handleClick = () => {
+            window.history.back();
+        }
       
         if(loading) {
             return (
@@ -44,6 +48,16 @@ const Storms = () => {
                         <span>Storms</span>
                         <div className="underline"></div>
                     </h1>
+                </div>
+                <div className="back">
+                    <Button  className='btn-vitals'
+                    onClick={handleClick}
+                    variant="text" 
+                    size='large' 
+                    startIcon={<ArrowBack />} 
+                    >
+                        Go back to Vitals
+                    </Button>            
                 </div>
                 <div className="website-nav">
                     <div className="btn-container">

@@ -26,14 +26,6 @@ const HeroSection = () => {
           endIcon={<HealthAndSafetyIcon />} 
           >Vitals</Button>
         </Link>
-        {/* <Link to='/sustainability' className='link'>
-          <Button className='btn-help'
-          variant="contained" 
-          color='primary' 
-          size='large' 
-          endIcon={<HealthAndSafetyIcon />} 
-          >Sustainability</Button>
-        </Link> */}
       </div>
     </div>
   )

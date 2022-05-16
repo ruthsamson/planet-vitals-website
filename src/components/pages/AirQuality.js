@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
+import { Button, IconButton, ImageListItem, ImageListItemBar } from "@mui/material";
 import Helmet from "react-helmet";
 import Esri_2 from '../../images/airQuality-Esri.png'
+import AirNow from '../../images/airQuality-AirNow.png'
 import Loading from "../Loading";
+import { ArrowBack } from "@mui/icons-material";
 
 
 const AirQuality = () => {
@@ -20,6 +22,9 @@ const AirQuality = () => {
             setTimeout(() => setLoading(false), 1000)
         }, [])
     
+        const handleClick = () => {
+            window.history.back();
+        }
       
         if(loading) {
             return (
@@ -27,7 +32,7 @@ const AirQuality = () => {
             )
         }
     
-        const{ title, header, url, img} = info[value]
+        const{ title, header, details, url, img} = info[value]
         return (
             <section className="section">
                 <Helmet>
@@ -42,6 +47,16 @@ const AirQuality = () => {
                         <span>Quality</span>
                         <div className="underline"></div>
                     </h1>
+                </div>
+                <div className="back">
+                    <Button  className='btn-vitals'
+                    onClick={handleClick}
+                    variant="text" 
+                    size='large' 
+                    startIcon={<ArrowBack />} 
+                    >
+                        Go back to Vitals
+                    </Button>            
                 </div>
                 <div className="website-nav">
                     <div className="btn-container">
@@ -59,6 +74,7 @@ const AirQuality = () => {
                     </div>
                     <article className="website-info">
                         <h3 className="website-header">{header}</h3>
+                        <p className="details">{details}</p>
                         <ImageListItem>
                             <img className='website-image' src={img} alt='Website homepage'/>
                             <ImageListItemBar
@@ -88,23 +104,18 @@ const AirQuality = () => {
         {
             title: 'Esri',
             header: 'Air Quality Aware',
+            details: 'Air Quality Index · Wind Speed · Population Affected · Workers at Risk',
             url: 'https://livingatlas.arcgis.com/airquality/#@=-102.794,42.267,5',
             img: Esri_2,
         },
-        // {
-        //     title: 'EPA',
-        //     header: 'United States Environmental Protection Agency (EPA)',
-        //     url: 'https://www.epa.gov/climatechange-science',
-        //     img: EPA,
+        {
+            title: 'AirNow',
+            header: 'AirNow Tracker',
+            details: 'Air Quality Index · Air Quality Forecast · Pollutant Levels by Type',
+            url: 'https://www.airnow.gov/',
+            img: AirNow,
     
-        // },
-        // {
-        //     title: 'NOAA',
-        //     header: 'National Oceanic and Atmospheric Administration (NOAA) ',
-        //     url: 'https://www.climate.gov/',
-        //     img: NOAA,
-
-        // },
+        }
     ]
     
     
