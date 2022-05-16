@@ -5,7 +5,6 @@ import Loading from "../Loading";
 import { Button } from "@mui/material";
 import { ArrowBack } from "@mui/icons-material";
 
-
 const Weather = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState({});
@@ -13,7 +12,7 @@ const Weather = () => {
   
 
 
-  const api_key = process.env.API_KEY;
+  const api_key = process.env.REACT_APP_API_KEY;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api_key}&units=imperial`;
 
 
@@ -88,7 +87,7 @@ const Weather = () => {
         {data.name !== undefined &&
         <div className="bottom">
           <div className="feels-like bottom-text">
-            {data.main ? <p className="bold">{data.main.feels_like.toFixed()}</p> : null}
+            {data.main ? <p className="bold">{data.main.feels_like.toFixed()} °F</p> : null}
             <p>Feels Like</p>
           </div>
           <div className="humidity bottom-text">

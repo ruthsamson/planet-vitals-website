@@ -9,16 +9,14 @@ import Sidebar from './Sidebar';
 
 const Navbar = () => {
 
+    const [value, setValue] = useState(0);
+
     const theme = useTheme();
 
     const screenSizeMatch = useMediaQuery(theme.breakpoints.down('md'));
 
-    const homeClick = () => {
-      window.location.href ='/';
-    }
-
-    const vitalsClick = () => {
-      window.location.href = '/vitals';
+    const handleChange = (e, value) => {
+     setValue(value)
     }
 
   return (
@@ -34,9 +32,14 @@ const Navbar = () => {
               </>
               ) : (
                 <>
-                  <Tabs className='navbar-container'>
-                    <Tab className='navbar-item' label='Home' onClick={homeClick}/>
-                    <Tab className='navbar-item' label='Vitals' onClick={vitalsClick}/>
+                  <Tabs
+                  className='navbar-container'
+                  value={value}
+                  onChange= {handleChange}
+                  indicatorColor='primary'
+                  >
+                    <Tab className='navbar-item' label='Home' to='/' LinkComponent={Link}/>
+                    <Tab className='navbar-item' label='Vitals' to='/vitals' LinkComponent={Link}/>
                   </Tabs>
                 </>
               )

@@ -20,8 +20,8 @@ body {
 }
 
 .vitals-img{
-    width: 400px !important;
-    height: 400px !important;
+    width: 350px !important;
+    height: 350px !important;
     border-radius: 50%;
     padding: 2rem;
     border: none !important;
@@ -114,6 +114,22 @@ body {
         font-size: 1.2rem;
     }
     
+  }
+
+  @media only screen and (min-width: 1785px) {
+    .vitals-img{
+        width: 400px !important;
+        height: 400px !important;
+    }
+
+  }
+
+  @media only screen and (min-width: 2000px) {
+    .vitals-img{
+        width: 450px !important;
+        height: 450px !important;
+    }
+
   }
 
 
