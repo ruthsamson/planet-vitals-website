@@ -58,7 +58,7 @@ const Weather = () => {
           </Button>            
         </div>
         <div className="container">
-          <div className="search">
+          <div className="search"> 
             <input 
             value={location} 
             onChange={e => setLocation(e.target.value)}
