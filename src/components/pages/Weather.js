@@ -12,9 +12,7 @@ const Weather = () => {
   
 
 
-  const api_key = process.env.REACT_APP_API_KEY;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api_key}&units=imperial`;
-
+  const url = `http://localhost:8000/weather/${location}`;
 
   const getData = async (e) => {
         axios.request(url).then((response) => {
