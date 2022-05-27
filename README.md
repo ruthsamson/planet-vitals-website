@@ -77,8 +77,9 @@ My focus was to make this website visually appealing and easily accessible. Sinc
 
 Some struggles I came across was trying to make this website friendly to all audiences while trying to keep it's primary target audience, those in the earth science field who would more likely frequent this site, engaged. Some terminology commonly used in the earth science field is present as there was no other way to describe some of the complex ways we analyze the planet, but it was kept minimal and added in tandem with easily understandable descriptions. It would not disable other users who are not in the field from understanding or accessing the information provided.
 
-I used React.js to build this project and Material UI to help design it. The npm packages that I used are: 
+I used React.js to build this project and Material UI to help design it. I also created a back-end with Express in order to safely connect to the OpenWeather API. There is a page section of the website that allows users to check current weather stats based on city. 
 
+The npm packages that I used are: 
 <a href="https://www.npmjs.com/package/react-helmet-async" alt="react-helmet-asynch npm package link">
  react-helmet-async,
 </a>
@@ -103,4 +104,3 @@ I used React.js to build this project and Material UI to help design it. The npm
  nodemon
 </a>
 
-I also created a back-end with Express in order to safely connect to the OpenWeather API. There is a page section of the website that allows users to check current weather stats based on city. 
