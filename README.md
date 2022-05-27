@@ -79,31 +79,28 @@ Some struggles I came across was trying to make this website friendly to all aud
 
 I used React.js to build this project and Material UI to help design it. The npm packages that I used are: 
 
-
-<a src="https://www.npmjs.com/package/react-helmet-async" alt="react-helmet-asynch npm package link">
- react-helmet-async
+<a href="https://www.npmjs.com/package/react-helmet-async" alt="react-helmet-asynch npm package link">
+ react-helmet-async,
 </a>
 
-<a src="https://www.npmjs.com/package/axios" alt="axios npm package link">
- axios
+<a href="https://www.npmjs.com/package/axios" alt="axios npm package link">
+ axios,
 </a>
 
-<a src="https://www.npmjs.com/package/express" alt="express npm package link">
- express
+<a href="https://www.npmjs.com/package/express" alt="express npm package link">
+ express,
 </a>
 
-<a src="https://www.npmjs.com/package/cors" alt="cors npm package link">
- cors
+<a href="https://www.npmjs.com/package/cors" alt="cors npm package link">
+ cors,
 </a>
 
-<a src="https://www.npmjs.com/package/dotenv" alt="dotenv npm package link">
- dotenv
+<a href="https://www.npmjs.com/package/dotenv" alt="dotenv npm package link">
+ dotenv,
 </a>
 
-<a src="https://www.npmjs.com/package/nodemon" alt="nodemon npm package link">
+<a href="https://www.npmjs.com/package/nodemon" alt="nodemon npm package link">
  nodemon
 </a>
 
-I also created a back-end with express in order to safely connect to the OpenWeather API. There is a page section of the website that allows users to check current weather stats based on city. 
-
-I would like to adjust how this website runs, by improving upon the loaders. 
+I also created a back-end with Express in order to safely connect to the OpenWeather API. There is a page section of the website that allows users to check current weather stats based on city. 
