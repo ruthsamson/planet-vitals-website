@@ -71,28 +71,39 @@ OpenWeather API
 
 This was my capstone project for my Advanced Full Stack Web Development Course. 
 
-I set out build a information hub for those who are interested or studying our planet. With an earth science research background, I have always wanted a site where credible information is provided about the planet's vitals. These 'vitals' include things like current earthquakes, storm reports, fire radars, etc. 
+I set out to build an information hub for those who are interested in looking into some of the vital signs of our planet. With an earth science research background, I have always wanted a site where credible resources such as radars, trackers, and databases are provided about the planet's vitals. These vitals include things like current air pollution stats, global temperature stats, storm reports, fire radars, etc. I wanted this to be a resource people could use to help on research projects, class presentations, and to learn something new about the planet we all inhabit.
 
-My focus was to make this website visually appealing and easily accessible. Since the target user audience would expand those in the earth science research field, I wanted to add descriptions and images that would make the information provided on this website easily digestable. Also, those who are not experienced in earth science research may not even be aware that websites that provide such information about our planet are available. It is a fun website that people could use to help on research projects, learn something new, and 
+My focus was to make this website visually appealing and easily accessible. Since the user audience could expand out of those in the earth science research field, I wanted to add descriptions and images that would make the information provided on this website easily digestable and appealing. Also, those who are not experienced in earth science research may not even be aware that websites that provide such information about our planet are available and I wanted to make an easy way for people to access this information in one place. 
 
-What was the context for this project? (ie: was this a side project? was this for Turing? was this for an experiment?)
-What did you set out to build?
-Why was this project challenging and therefore a really good learning experience?
-What were some unexpected obstacles?
-What tools did you use to implement this project?
-This might seem obvious because you are IN this codebase, but to all other humans now is the time to talk about why you chose webpack instead of create react app, or D3, or vanilla JS instead of a framework etc. Brag about your choices and justify them here.
-Example:
-This was a 3 week long project built during my third module at Turing School of Software and Design. Project goals included using technologies learned up until this point and familiarizing myself with documentation for new features.
+Some struggles I came across was trying to make this website friendly to all audiences while trying to keep it's primary target audience, those in the earth science field who would more likely frequent this site, engaged. Some terminology commonly used in the earth science field is present as there was no other way to describe some of the complex ways we analyze the planet, but it was kept minimal and added in tandem with easily understandable descriptions. It would not disable other users who are not in the field from understanding or accessing the information provided.
 
-Originally I wanted to build an application that allowed users to pull data from the Twitter API based on what they were interested in, such as 'most tagged users'. I started this process by using the create-react-app boilerplate, then adding react-router-4.0 and redux.
-
-One of the main challenges I ran into was Authentication. This lead me to spend a few days on a research spike into OAuth, Auth0, and two-factor authentication using Firebase or other third parties. Due to project time constraints, I had to table authentication and focus more on data visualization from parts of the API that weren't restricted to authenticated users.
-
-At the end of the day, the technologies implemented in this project are React, React-Router 4.0, Redux, LoDash, D3, and a significant amount of VanillaJS, JSX, and CSS. I chose to use the create-react-app boilerplate to minimize initial setup and invest more time in diving into weird technological rabbit holes. In the next iteration I plan on handrolling a webpack.config.js file to more fully understand the build process.
+I used React.js to build this project and Material UI to help design it. The npm packages that I used are: 
 
 
-## 👏 Credits
-List of Contributors: 
+<a src="https://www.npmjs.com/package/react-helmet-async" alt="react-helmet-asynch npm package link">
+ react-helmet-async
+</a>
 
--
--
+<a src="https://www.npmjs.com/package/axios" alt="axios npm package link">
+ axios
+</a>
+
+<a src="https://www.npmjs.com/package/express" alt="express npm package link">
+ express
+</a>
+
+<a src="https://www.npmjs.com/package/cors" alt="cors npm package link">
+ cors
+</a>
+
+<a src="https://www.npmjs.com/package/dotenv" alt="dotenv npm package link">
+ dotenv
+</a>
+
+<a src="https://www.npmjs.com/package/nodemon" alt="nodemon npm package link">
+ nodemon
+</a>
+
+I also created a back-end with express in order to safely connect to the OpenWeather API. There is a page section of the website that allows users to check current weather stats based on city. 
+
+I would like to adjust how this website runs, by improving upon the loaders. 
