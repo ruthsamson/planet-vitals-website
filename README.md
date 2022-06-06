@@ -8,6 +8,7 @@ A fully responsive MERN application about the planet that categorizes related to
 
 <img width="800" alt="planet-earth" src="https://user-images.githubusercontent.com/89995514/172221685-e259aa96-ca90-4bee-a5da-47a64810d404.png">
 <img width="800" alt="planet-earth-2" src="https://user-images.githubusercontent.com/89995514/172221706-a6afffea-21f2-4313-b0b7-38f7039a081d.png">
+<img width="800" alt="planet-earth-4" src="https://user-images.githubusercontent.com/89995514/172223035-0394c0c1-b5e9-41dd-bacb-51cbc2843c79.png">
 <img width="800" alt="planet-earth-3" src="https://user-images.githubusercontent.com/89995514/172221717-4c4a7257-94ca-424e-9e62-2a76ac0979a0.png">
 
 
